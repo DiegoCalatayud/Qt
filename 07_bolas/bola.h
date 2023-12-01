@@ -1,8 +1,11 @@
 #ifndef _BOLA_H
 #define _BOLA_H
+
 #include <QPainter>
+//#include <QPainter>
 #include <QVector>
 #include <QColor>
+
 class Bola {
 public:
 	Bola();
@@ -10,6 +13,8 @@ public:
 	int diametro;
 	void pintar(QPainter &pintor);
 	void mover(float width, float height);
+	bool choca(Bola *bola);
+	float distancia(Bola *otra);
 	QColor color;
 	QVector<Bola*> bolas;
 };
